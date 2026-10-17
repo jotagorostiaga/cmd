@@ -136,8 +136,9 @@ body.menu-open .menu{clip-path:inset(0 0 0 0)}
 .hero-row{display:grid;grid-template-columns:1fr;justify-items:center;text-align:center;gap:clamp(28px,3vw,44px)}
 .hero-claim{margin:0;font-weight:500;font-family:var(--f-mono);font-size:clamp(44px,6.2vw,112px);line-height:.98;letter-spacing:-.01em;text-transform:uppercase;text-wrap:balance;max-width:14ch;margin-inline:auto}
 .hero-sub{max-width:40ch;margin:clamp(18px,2vw,32px) auto 0;color:#e6e6e3;font-size:clamp(18px,1.7vw,28px);line-height:1.35;font-weight:300}
-.hero-actions{display:flex;gap:10px;align-items:center}
-.hero-claim .live{display:inline-block;background:var(--violet);line-height:.86;padding:.06em .1em .02em;margin-top:.14em;vertical-align:baseline}
+.hero-actions{display:flex;gap:10px;align-items:center;justify-content:center;margin-top:clamp(28px,3vw,44px)}
+.hero.go .hero-actions{transition-delay:.3s}
+.hero-claim .live{color:var(--violet-text)}
 .live-v{color:var(--violet-text)}
 .vbtn{width:46px;height:46px;border:1px solid rgba(255,255,255,.4);display:grid;place-items:center}
 .vbtn:hover{border-color:var(--white)}
@@ -467,6 +468,7 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:28px var(--gutter)}
         <div>
           <h1 class="hero-claim">Behind what happens <span class="live">live</span></h1>
           <p class="hero-sub">Producción integral, ingeniería e infraestructura técnica para experiencias en vivo.</p>
+          <div class="hero-actions"><a href="#proyectos" class="btn" data-scramble><span>Ver proyectos</span><svg class="arr"><use href="#arr"/></svg></a></div>
         </div>
       </div>
     </div>
@@ -787,10 +789,10 @@ const PROJ = [
   copy:['De la implantación al desmontaje: ingeniería, estructuras, iluminación, video, energía y operación coordinados para un live de escala internacional.'],
   stack:['kalk-01','kalk-02','kalk-03'],gal:G('kalk',12).slice(3)},
  {slug:'john-digweed',title:'John Digweed',artists:'John Digweed',d:null,date:null,place:'Autódromo de la Ciudad de Buenos Aires',
-  disc:ALL,cover:'sd-27',
+  disc:ALL,cover:'jd-14',video:'assets/video/jd-hero.mp4',reels:['jd-r1'],
   lead:'Una puesta en clave roja pensada para acompañar la noche de uno de los referentes históricos de la música electrónica.',
   copy:['Detrás de este proyecto hubo una planificación técnica pensada como un único sistema. Trabajamos sobre el predio, la ingeniería y la infraestructura, coordinando estructuras, rigging, iluminación, audio, video y energía, además de la logística y operación necesarias para llevar el evento desde el plano hasta el vivo.'],
-  stack:['sd-27','sd-9','sd-43'],gal:['sd-37','sd-33','sd-43','sd-9']},
+  stack:['jd-14','jd-16','jd-10'],gal:['jd-08','jd-09','jd-12','jd-11','jd-10','jd-13','jd-15','jd-16']},
  {slug:'open-air',d:'2025-11',title:'Purple Disco Machine Open Air',artists:'Purple Disco Machine',date:'NOV 25',place:'Autódromo de la Ciudad de Buenos Aires',
   disc:ALL,cover:'pdm-stage',
   lead:'Del atardecer a la noche en un predio abierto, con una cabina central y pantallas LED de gran formato frente a miles de personas.',
