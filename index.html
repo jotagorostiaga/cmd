@@ -637,7 +637,7 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:28px var(--gutter)}
       <div class="pp"><span class="muted">Director General</span><span class="v">Matías E. Buzzelli</span><span class="c"><a class="ulink" href="mailto:matias@live-cmd.com">matias@live-cmd.com</a><a class="ulink" href="tel:+5491145339165">+54 9 11 4533-9165</a></span></div>
       <div class="pp"><span class="muted">Producción</span><span class="v">Facundo Marotta</span><span class="c"><a class="ulink" href="mailto:facundo@live-cmd.com">facundo@live-cmd.com</a><a class="ulink" href="tel:+5491132555485">+54 9 11 3255-5485</a></span></div>
       <div class="pp"><span class="muted">Producción</span><span class="v">Agustina G. Remualdi</span><span class="c"><a class="ulink" href="mailto:agustina@live-cmd.com">agustina@live-cmd.com</a><a class="ulink" href="tel:+5491122964058">+54 9 11 2296-4058</a></span></div>
-      <div><span class="muted">Instagram</span><a class="v ulink" href="https://www.instagram.com/cmd.lighting/" target="_blank" rel="noopener">@cmd.lighting</a></div>
+      <div><span class="muted">Instagram</span><a class="v ulink" href="https://www.instagram.com/live.cmd/" target="_blank" rel="noopener">@live.cmd</a></div>
       <div><span class="muted">Base</span><span class="v">From Buenos Aires, Argentina to the world.</span></div>
     </div>
     <form id="form" novalidate>
@@ -670,7 +670,7 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:28px var(--gutter)}
     </div>
     <div class="mono">
       <h4 class="muted">Contacto</h4>
-      <ul><li><a class="ulink" href="mailto:produccion@live-cmd.com">produccion@live-cmd.com</a></li><li><a class="ulink" href="tel:+5491145339165">+54 9 11 4533-9165</a></li><li><a class="ulink" href="https://www.instagram.com/cmd.lighting/" target="_blank" rel="noopener">@cmd.lighting</a></li><li><a class="ulink" href="https://live-cmd.com">live-cmd.com</a></li></ul>
+      <ul><li><a class="ulink" href="mailto:produccion@live-cmd.com">produccion@live-cmd.com</a></li><li><a class="ulink" href="tel:+5491145339165">+54 9 11 4533-9165</a></li><li><a class="ulink" href="https://www.instagram.com/live.cmd/" target="_blank" rel="noopener">@live.cmd</a></li></ul>
     </div>
     <div class="mono">
       <h4 class="muted">Base</h4>
@@ -694,19 +694,23 @@ const I = n=>`assets/img/${n}.webp`, IS = n=>`assets/img/${n}-sm.webp`;
 
 /* ---------------- DATA ---------------- */
 const DISC = [
- {id:'integrated',name:'Integrated Production',img:'kalk-06',
+ {id:'integrated',name:'Integrated Production',img:'integrated-01',pic:'integrated-01-wide',
   text:'Dirigimos y coordinamos el proceso completo de producción, alineando alcance, presupuesto, cronogramas, recursos, proveedores y equipos desde el primer brief hasta el desmontaje.',
   tags:['Producción general','Producción técnica','Dirección de producción','Diseño escénico']},
- {id:'planning',name:'Planning, Engineering & Safety',img:'anotr-04',
+ {id:'planning',name:'Planning, Engineering & Safety',img:'planning-01',pic:'planning-01-wide',
   text:'Convertimos las necesidades creativas y productivas en planes técnicamente viables, documentados y preparados para su construcción, habilitación y operación segura.',
   tags:['Ingeniería','Documentación técnica','Diseño de predios','Habilitaciones','Permisos','SAP','Seguridad']},
- {id:'infra',name:'Technical Infrastructure',img:'paco-osuna-04',
+ {id:'infra',name:'Technical Infrastructure',img:'infra-01',pic:'infra-01-wide',
   text:'Diseñamos, proveemos e integramos los sistemas técnicos detrás de cada producción, asegurando que todas las disciplinas funcionen como parte de una misma infraestructura.',
   tags:['Estructuras y rigging','Iluminación y FX','Audio','Video','Energía y distribución eléctrica','Rentals'],
   subs:[['Structures & Rigging','Estructuras, truss y colgado'],['Lighting & FX','Diseño, programación y operación'],['Audio','Sistemas de PA y monitoreo'],['Video','Pantallas LED y contenidos'],['Power & Electrical Distribution','Generación y tableros'],['Rentals','Equipamiento técnico en alquiler']]},
- {id:'ops',name:'Operations & Logistics',img:'bibi-04',
+ {id:'ops',name:'Operations & Logistics',img:'ops-01',
   text:'Planificamos y gestionamos todo lo necesario para montar la producción, operar el evento en tiempo real y ejecutar un desmontaje eficiente.',
-  tags:['Logística','Coordinación de proveedores','Montaje','Operación onsite','Desmontaje']}
+  tags:['Logística','Coordinación de proveedores','Montaje','Operación onsite','Desmontaje']},
+ {id:'stage',name:'Stage Design',img:'stage-01',pic:'stage-01-wide',
+  text:'Diseñamos y desarrollamos escenarios que integran arquitectura escénica, tecnología e identidad visual, transformando conceptos creativos en experiencias en vivo. Entregamos la puesta diseñada junto con toda la documentación necesaria para montarla: renders, lightplots y planos técnicos.',
+  tags:['Estructuras y rigging','Iluminación y FX','Pantallas','Escenografía y ambientación','Renders y lightplots'],
+  subs:[['Structure & Rigging Design','La forma del escenario: estructuras y colgado'],['Lighting & FX Design','Planta de iluminación y efectos'],['Screen Design','Diseño y distribución de pantallas LED'],['Set Design & Ambience','Escenografía y ambientación'],['Technical Package','Renders, lightplots y planos para montar']]}
 ];
 /* null = dato a confirmar con CMD */
 const ALL=['Integrated Production','Planning, Engineering & Safety','Technical Infrastructure','Operations & Logistics'];
@@ -788,7 +792,7 @@ const PROJ = [
   lead:'Un show en vivo de gran formato, con pantallas laterales, haces y una pantalla central que domina el predio.',
   copy:['De la implantación al desmontaje: ingeniería, estructuras, iluminación, video, energía y operación coordinados para un live de escala internacional.'],
   stack:['kalk-01','kalk-02','kalk-03'],gal:G('kalk',12).slice(3)},
- {slug:'john-digweed',title:'John Digweed',artists:'John Digweed',d:null,date:null,place:'Autódromo de la Ciudad de Buenos Aires',
+ {slug:'john-digweed',title:'John Digweed',artists:'John Digweed',d:'2026-09',date:'SEP 26',place:'Autódromo de la Ciudad de Buenos Aires',
   disc:ALL,cover:'jd-14',video:'assets/video/jd-hero.mp4',reels:['jd-r1'],
   lead:'Una puesta en clave roja pensada para acompañar la noche de uno de los referentes históricos de la música electrónica.',
   copy:['Detrás de este proyecto hubo una planificación técnica pensada como un único sistema. Trabajamos sobre el predio, la ingeniería y la infraestructura, coordinando estructuras, rigging, iluminación, audio, video y energía, además de la logística y operación necesarias para llevar el evento desde el plano hasta el vivo.'],
@@ -827,7 +831,7 @@ function renderHome(){
   $('#cards').innerHTML = DISC.map((d,i)=>`
    <article class="card">
      <div class="txt">
-       <div><span class="mono idx">0${i+1} / 04</span><h3 class="display" style="margin-top:18px">${d.name}</h3><p>${d.text}</p></div>
+       <div><span class="mono idx">0${i+1} / ${String(DISC.length).padStart(2,'0')}</span><h3 class="display" style="margin-top:18px">${d.name}</h3><p>${d.text}</p></div>
        <div class="tags mono">${d.tags.map(t=>`<span>${t}</span>`).join('')}</div>
      </div>
      <div class="img"><img src="${I(d.img)}" alt="" loading="lazy"></div>
@@ -839,7 +843,7 @@ function renderServices(){
      <aside><h2 class="display">${d.name}</h2><div class="tags mono">${d.tags.map(t=>`<span>${t}</span>`).join('')}</div></aside>
      <div class="body">
        <p class="rv">${d.text}</p>
-       <div class="pic rv"><img src="${I(d.img)}" alt="" loading="lazy"></div>
+       <div class="pic rv"><img src="${I(d.pic||d.img)}" alt="" loading="lazy"></div>
        ${d.subs?`<div class="subs">${d.subs.map(s=>`<div><span class="mono muted">${s[1]}</span><h3>${s[0]}</h3></div>`).join('')}</div>`:''}
      </div>
    </section>`).join('');
